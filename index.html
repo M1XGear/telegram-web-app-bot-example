@@ -231,7 +231,7 @@
     var initData = Telegram.WebApp.initData || '';
     var initDataUnsafe = Telegram.WebApp.initDataUnsafe || {};
     
-    Telegram.WebApp.showAlert(JSON.stringify(initData));
+    Telegram.WebApp.showAlert(Telegram.WebApp.version);
 
     document.querySelector('#greeting').innerHTML = `Hi, ${initDataUnsafe.user.first_name}!`;
     document.querySelector('#initData').innerHTML = JSON.stringify(initData);
