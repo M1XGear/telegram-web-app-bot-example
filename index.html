@@ -228,12 +228,14 @@
 <script type="application/javascript">
     Telegram.WebApp.ready();
 
-    const initData = Telegram.WebApp.initData || '';
-    const initDataUnsafe = Telegram.WebApp.initDataUnsafe || {};
+    var initData = Telegram.WebApp.initData || '';
+    var initDataUnsafe = Telegram.WebApp.initDataUnsafe || {};
+    
+    Telegram.WebApp.showAlert(JSON.stringify(initData));
 
     document.querySelector('#greeting').innerHTML = `Hi, ${initDataUnsafe.user.first_name}!`;
-    document.querySelector('#initData').innerHTML = JSON.stringify(initData, null, 2);
-    document.querySelector('#initDataUnsafe').innerHTML = JSON.stringify(initDataUnsafe, null, 2);
+    document.querySelector('#initData').innerHTML = JSON.stringify(initData);
+    document.querySelector('#initDataUnsafe').innerHTML = JSON.stringify(initDataUnsafe);
     document.querySelector('#themeData').html(JSON.stringify(Telegram.WebApp.themeParams, null, 2));
 
     Telegram.WebApp.MainButton
