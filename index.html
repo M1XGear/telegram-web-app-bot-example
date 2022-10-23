@@ -228,7 +228,7 @@
 <script type="application/javascript">
     Telegram.WebApp.ready();
 
-    var initData = Telegram.WebApp.initData || '';
+    var initData = Telegram.WebApp.initData || Telegram.WebView.initParams;
     var initDataUnsafe = Telegram.WebApp.initDataUnsafe || {};
     
     Telegram.WebApp.showAlert(Telegram.WebApp.version);
